@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.login">
+   <children>
+      <Label fx:id="username" layoutX="44.0" layoutY="112.0" text="UserName" />
+      <Label fx:id="password" layoutX="47.0" layoutY="158.0" text="Password" />
+      <Label fx:id="timezone" layoutX="45.0" layoutY="202.0" text="Time Zone" />
+      <TextField fx:id="UserNameTextField" layoutX="172.0" layoutY="108.0" />
+      <TextField fx:id="PasswordTextField" layoutX="172.0" layoutY="154.0" />
+      <Label fx:id="loginField" layoutX="177.0" layoutY="30.0" minHeight="40.0" minWidth="50.0" text="Login">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="exit" layoutX="264.0" layoutY="246.0" minHeight="25.0" minWidth="60.0" mnemonicParsing="false" onAction="#onActionExit" text="Exit" />
+      <Button fx:id="button_login" layoutX="172.0" layoutY="246.0" minHeight="25.0" minWidth="60.0" mnemonicParsing="false" onAction="#onActionLogin" text="Login" />
+      <TextField fx:id="timezoneTextField" editable="false" layoutX="172.0" layoutY="198.0" />
+
+
+   </children>
+</AnchorPane>

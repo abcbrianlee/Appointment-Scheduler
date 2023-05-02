@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="451.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.reportsController">
+    <TableView fx:id="reportTableView" layoutX="33.0" layoutY="156.0" prefHeight="200.0" prefWidth="817.0">
+        <columns>
+            <TableColumn fx:id="tcID" prefWidth="44.0" text="ID" />
+            <TableColumn fx:id="tcTitle" prefWidth="45.0" text="Title" />
+            <TableColumn fx:id="tcDescription" prefWidth="67.0" text="Description" />
+            <TableColumn fx:id="tcLocation" prefWidth="64.0" text="Location" />
+            <TableColumn fx:id="tcType" prefWidth="54.0" text="Type" />
+            <TableColumn fx:id="tcStartDate" prefWidth="152.0" text="Start Date" />
+            <TableColumn fx:id="tcEndDate" prefWidth="141.0" text="End Date" />
+            <TableColumn fx:id="tcContact" prefWidth="67.0" text="Contact" />
+            <TableColumn fx:id="tcCustomerID" prefWidth="73.0" text="Customer ID" />
+            <TableColumn fx:id="tcUserID" minWidth="20.0" prefWidth="51.0" text="User ID" />
+        </columns>
+    </TableView>
+   <Label layoutX="369.0" layoutY="14.0" text="Reports">
+      <font>
+         <Font size="29.0" />
+      </font>
+   </Label>
+   <RadioButton fx:id="rb_viewAll" layoutX="38.0" layoutY="67.0" mnemonicParsing="false" onAction="#onActionRadio" selected="true" text="View Schedule">
+      <toggleGroup>
+         <ToggleGroup fx:id="opt" />
+      </toggleGroup></RadioButton>
+   <RadioButton fx:id="rb_type" layoutX="177.0" layoutY="67.0" mnemonicParsing="false" onAction="#onActionRadio" text="Customers by Type" toggleGroup="$opt" />
+   <RadioButton fx:id="rb_month" layoutX="522.0" layoutY="67.0" mnemonicParsing="false" onAction="#onActionRadio" text="Customers by Month" toggleGroup="$opt" />
+   <RadioButton fx:id="rb_contact" layoutX="343.0" layoutY="67.0" mnemonicParsing="false" onAction="#onActionRadio" text="Customers by Contact" toggleGroup="$opt" />
+   <ComboBox fx:id="cb_option" layoutX="314.0" layoutY="106.0" prefWidth="150.0" />
+   <Label fx:id="label_options" layoutX="249.0" layoutY="110.0" prefHeight="17.0" prefWidth="3.0" text=" " />
+   <Button layoutX="416.0" layoutY="378.0" mnemonicParsing="false" onAction="#onActionExit" text="Exit" />
+   <Label fx:id="label_customer" layoutX="625.0" layoutY="110.0" prefHeight="17.0" prefWidth="3.0" text=" " />
+   <Label layoutX="499.0" layoutY="110.0" text="Total Customers:" />
+   <RadioButton fx:id="rb_country" layoutX="702.0" layoutY="67.0" mnemonicParsing="false" onAction="#onActionRadio" text="Customers by Country" toggleGroup="$opt" />
+</AnchorPane>

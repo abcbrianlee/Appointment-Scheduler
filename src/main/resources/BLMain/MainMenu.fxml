@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="849.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainMenu">
+   <children>
+      <TableView fx:id="appointmentTableView" layoutX="26.0" layoutY="75.0" prefHeight="176.0" prefWidth="804.0">
+        <columns>
+          <TableColumn fx:id="tcID" prefWidth="44.0" text="ID" />
+          <TableColumn fx:id="tcTitle" prefWidth="45.0" text="Title" />
+            <TableColumn fx:id="tcDescription" prefWidth="67.0" text="Description" />
+            <TableColumn fx:id="tcLocation" prefWidth="64.0" text="Location" />
+            <TableColumn fx:id="tcType" prefWidth="54.0" text="Type" />
+            <TableColumn fx:id="tcStartDate" prefWidth="152.0" text="Start Date" />
+            <TableColumn fx:id="tcEndDate" prefWidth="141.0" text="End Date" />
+            <TableColumn fx:id="tcContact" prefWidth="67.0" text="Contact" />
+            <TableColumn fx:id="tcCustomerID" prefWidth="73.0" text="Customer ID" />
+            <TableColumn fx:id="tcUserID" minWidth="20.0" prefWidth="51.0" text="User ID" />
+        </columns>
+      </TableView>
+      <TableView fx:id="customerTableView" layoutX="26.0" layoutY="331.0" prefHeight="130.0" prefWidth="520.0">
+        <columns>
+            <TableColumn fx:id="customer_ID" prefWidth="59.0" text="ID" />
+          <TableColumn fx:id="customer_Name" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="customer_Address" prefWidth="104.0" text="Address" />
+            <TableColumn fx:id="customer_Phone" prefWidth="98.0" text="Phone Number" />
+            <TableColumn fx:id="customer_divisionID" prefWidth="99.0" text="Division ID" />
+            <TableColumn fx:id="customer_Postal" prefWidth="83.0" text="Postal Code" />
+        </columns>
+      </TableView>
+      <Label layoutX="26.0" layoutY="29.0" prefHeight="24.0" prefWidth="160.0" text="Appointments">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="26.0" layoutY="277.0" mnemonicParsing="false" onAction="#onActionAddAppointment" text="Add" />
+      <Button layoutX="115.0" layoutY="277.0" mnemonicParsing="false" onAction="#onActionAppointmentModify" text="Update" />
+      <Button layoutX="217.0" layoutY="277.0" mnemonicParsing="false" onAction="#onActionAppointmentDelete" text="Delete" />
+      <Button layoutX="26.0" layoutY="480.0" mnemonicParsing="false" onAction="#onActionCustomerAdd" text="Add" />
+      <Button layoutX="115.0" layoutY="480.0" mnemonicParsing="false" onAction="#onActionCustomerModify" text="Update" />
+      <Button layoutX="217.0" layoutY="480.0" mnemonicParsing="false" onAction="#onActionCustomerDelete" text="Delete" />
+      <Button layoutX="590.0" layoutY="358.0" mnemonicParsing="false" onAction="#onActionReport" text="Reports" />
+      <Button layoutX="592.0" layoutY="408.0" mnemonicParsing="false" onAction="#onActionLogout" text="Logout" />
+      <RadioButton fx:id="RB_Month" layoutX="557.0" layoutY="35.0" mnemonicParsing="false" onAction="#radioSelection" text="View by Month">
+         <toggleGroup>
+            <ToggleGroup fx:id="group1" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="RB_Week" layoutX="396.0" layoutY="35.0" mnemonicParsing="false" onAction="#radioSelection" text="View by Week" toggleGroup="$group1" />
+      <RadioButton fx:id="RB_View" layoutX="225.0" layoutY="35.0" mnemonicParsing="false" onAction="#radioSelection" selected="true" text="View All" toggleGroup="$group1" />
+   </children>
+</AnchorPane>
