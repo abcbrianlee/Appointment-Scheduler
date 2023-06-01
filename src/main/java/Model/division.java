@@ -5,10 +5,7 @@ import DAO.JDBC;
 import java.sql.*;
 
 public class division {
-    private static int divisionID;
-    public static void setDivisionID(int id) {
-        divisionID = id;
-    }
+
     public static Integer getDivision(String division) throws SQLException {
         Connection conn = null;
         PreparedStatement stmt = null;

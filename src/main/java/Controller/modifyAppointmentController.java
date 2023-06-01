@@ -157,7 +157,7 @@ public class modifyAppointmentController {
                 } else {
                     AppointmentDB.updateAppointment(addAppointmentID, addTitle, addDescription, addLocation, addType, addContact, addUserID, Customer.getCustomerID(addCustomerID), formattedStart , formattedEnd);
                     Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-                    Object scene = FXMLLoader.load(getClass().getResource("/BLMain/MainMenu.fxml"));
+                    Object scene = FXMLLoader.load(getClass().getResource("/MainMenu.fxml"));
                     stage.setScene(new Scene((Parent) scene));
                     stage.show();
 
@@ -214,11 +214,11 @@ public class modifyAppointmentController {
             }
             return true;
         }
-    /**Exits the page and returns to Main Menu
+    /**Exits the page and returns to BLMain.Main Menu
      * @param event  Exit Button*/
         public void onActionExit(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        Object scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/BLMain/MainMenu.fxml")));
+        Object scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/MainMenu.fxml")));
         stage.setScene(new Scene((Parent) scene));
         stage.show();
     }

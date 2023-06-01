@@ -4,8 +4,7 @@ public class Reports {
 
     private int countryCount;
     private String countryName;
-    public String appointmentMonth;
-    public int appointmentTotal;
+
 
     /**
      * @param countryName

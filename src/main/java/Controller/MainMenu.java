@@ -134,7 +134,7 @@ private static Object scene;
             return;
         }
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/BLMain/modifyAppointment.fxml"));
+        loader.setLocation(getClass().getResource("/modifyAppointment.fxml"));
         loader.load();
 
         modifyAppointmentController MCController = loader.getController();
@@ -151,7 +151,7 @@ private static Object scene;
     @FXML
     public void onActionAddAppointment(ActionEvent event) throws IOException {
         stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        scene = FXMLLoader.load(userDB.class.getResource("/BLMain/appointment.fxml"));
+        scene = FXMLLoader.load(userDB.class.getResource("/appointment.fxml"));
         stage.setTitle("Add Customer Page");
         stage.setScene(new Scene((Parent) scene));
         stage.show();
@@ -160,7 +160,7 @@ private static Object scene;
      * @param event  Report Page*/
     public void onActionReport(ActionEvent event) throws IOException {
         stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        scene = FXMLLoader.load(userDB.class.getResource("/BLMain/report.fxml"));
+        scene = FXMLLoader.load(userDB.class.getResource("/report.fxml"));
         stage.setTitle("Add Customer Page");
         stage.setScene(new Scene((Parent) scene));
         stage.show();
@@ -175,7 +175,7 @@ private static Object scene;
             return;
         }
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/BLMain/modifyCustomer.fxml"));
+        loader.setLocation(getClass().getResource("/modifyCustomer.fxml"));
         loader.load();
 
 
@@ -193,7 +193,7 @@ private static Object scene;
     @FXML
     public void onActionCustomerAdd(ActionEvent event) throws IOException {
     stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-    scene = FXMLLoader.load(userDB.class.getResource("/BLMain/customer.fxml"));
+    scene = FXMLLoader.load(userDB.class.getResource("/customer.fxml"));
     stage.setTitle("Add Customer Page");
     stage.setScene(new Scene((Parent) scene));
     stage.show();
@@ -224,7 +224,7 @@ private static Object scene;
     @FXML
     public void onActionLogout(ActionEvent event) throws IOException {
         stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        scene = FXMLLoader.load(getClass().getResource("/BLMain/login.fxml"));
+        scene = FXMLLoader.load(getClass().getResource("/login.fxml"));
         stage.setTitle("Appointment Management System");
         stage.setScene(new Scene((Parent) scene));
         stage.show();

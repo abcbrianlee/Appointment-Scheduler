@@ -50,7 +50,7 @@ private static Object scene;
                     if (retrievePassword.equals(password)) {
                         System.out.println("correct");
                         stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-                        scene = FXMLLoader.load(userDB.class.getResource("/BLMain/MainMenu.fxml"));
+                        scene = FXMLLoader.load(userDB.class.getResource("/MainMenu.fxml"));
                         stage.setTitle("Appointment System");
                         stage.setScene(new Scene((Parent) scene));
                         stage.show();

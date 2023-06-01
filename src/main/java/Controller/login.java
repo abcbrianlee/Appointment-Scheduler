@@ -1,6 +1,6 @@
 package Controller;
 
-import BLMain.Logger;
+import Main.Logger;
 import DAO.userDB;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,18 +10,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-import java.io.FileWriter;
-import java.io.PrintWriter;
+
 import java.net.URL;
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
+
 import java.time.ZoneId;
 import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+
 
 public class login implements Initializable {
     /**
@@ -54,9 +50,7 @@ public class login implements Initializable {
      */
     @FXML
     private Button exit;
-    private String alertTitle;
-    private String alertHeader;
-    private String alertContext;
+
     /**
      * Username TextField
      */
@@ -72,7 +66,7 @@ public class login implements Initializable {
      */
     @FXML
     private TextField timezoneTextField;
-    ResourceBundle rb = ResourceBundle.getBundle("BLMain/Nat_fr", Locale.getDefault());
+    ResourceBundle rb = ResourceBundle.getBundle("/Nat_fr", Locale.getDefault());
 
     /**
      * Method that takes username and password and passes as parameter to check if Mysql login credentials match

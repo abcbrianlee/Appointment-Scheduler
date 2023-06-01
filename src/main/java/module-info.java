@@ -4,10 +4,12 @@ module com.example.software2 {
     requires java.sql;
 
 
-    opens BLMain to javafx.fxml;
-    exports BLMain;
-    exports Controller;
+    opens Main to javafx.fxml;
     opens Controller to javafx.fxml;
+
+    exports Main;
+    exports Controller;
     exports Model;
+
 
 }

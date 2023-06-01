@@ -3,6 +3,7 @@ package Controller;
 import DAO.AppointmentDB;
 import DAO.CustomerDB;
 import DAO.JDBC;
+import static DAO.JDBC.connection;
 import Model.Customer;
 import Model.division;
 import javafx.collections.FXCollections;
@@ -82,7 +83,7 @@ public class customerController {
     }
     /**Takes input and saves Customer.
      * Before saving, customer is validated to make sure that no input is left empty
-     * AFter successful save, redirected to Main Menu
+     * AFter successful save, redirected to BLMain.Main Menu
      * @param event Save Customer Button*/
     public void onActionSave(ActionEvent event) throws SQLException, IOException {
         Integer addCustomerID = CustomerDB.assignCustomerID();
@@ -101,17 +102,17 @@ public class customerController {
             Integer divisionID = division.getDivision(addDivision);
             CustomerDB.addCustomer(addCustomerID, addName, addAddress, addPhone, addPostal, String.valueOf(divisionID));
             Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-            Object scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/BLMain/MainMenu.fxml")));
+            Object scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/MainMenu.fxml")));
             stage.setScene(new Scene((Parent) scene));
             stage.show();
 
         }
         }
-    /**Returns page to Main Menu
+    /**Returns page to BLMain.Main Menu
      * @param event Exit Button*/
     public void onActionCancel(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        Object scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/BLMain/MainMenu.fxml")));
+        Object scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/MainMenu.fxml")));
         stage.setScene(new Scene((Parent) scene));
         stage.show();
     }

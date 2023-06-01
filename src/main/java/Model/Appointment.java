@@ -5,8 +5,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Appointment {
-    private  LocalDate startDate;
-    private  LocalDate endDate;
+
     /**Private Integer Appointment ID*/
     private int appointmentID;
     /**Private String Title*/
@@ -43,24 +42,7 @@ public class Appointment {
         this.endTime = endTime;
 
     }
-//public Appointment(int appointmentID, String title, String description, String location, String type,
-//                   int customerID, int userID, int contactID, LocalTime startTime, LocalTime endTime, LocalDate startDate, LocalDate endDate) {
-//    this.appointmentID = appointmentID;
-//    this.title = title;
-//    this.description = description;
-//    this.location = location;
-//    this.type = type;
-//    this.customerID = customerID;
-//    this.userID = userID;
-//    this.contactID = contactID;
-//    this.startTime = LocalDateTime.from(startTime);
-//    this.endTime = LocalDateTime.from(endTime);
-//    this.startDate = startDate;
-//    this.endDate = endDate;
-//
-//
-//
-//}
+
     /**Appointment ID Getter*/
     public int getAppointmentID() {
         return appointmentID;
@@ -136,14 +118,7 @@ public class Appointment {
     /**
      * Starting Time Getter
      */
-//    public static LocalDateTime getStartTime() {
-//        return startTime;
-//    }
-//    /**Starting Time Setter*/
-//    public void setStartTime(LocalDateTime startTime) {
-//        this.startTime = startTime;
-//    }
-//    /**Ending Time Getter*/
+
 
     public LocalDateTime getStartTime() {
         return startTime;
@@ -163,9 +138,5 @@ public class Appointment {
         this.endTime= endTime;
     }
 
-//    public  LocalDate getStartDate(){return startDate;}
-//    public void setStartDate(LocalDate startDate){this.startDate = startDate;}
-//    public  LocalDate getEndDate(){return endDate;}
-//    public void setEndDate(LocalDate endDate){this.endDate = endDate;}
 
 }

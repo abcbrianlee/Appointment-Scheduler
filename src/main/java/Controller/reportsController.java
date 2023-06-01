@@ -165,11 +165,11 @@ public class reportsController implements Initializable {
             reportTableView.setItems(data);
         }
         }
-    /**Exit Button returns to Main Menu
+    /**Exit Button returns to BLMain.Main Menu
      * @param event Exit Button*/
     public void onActionExit(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        Object scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/BLMain/MainMenu.fxml")));
+        Object scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/MainMenu.fxml")));
         stage.setScene(new Scene((Parent) scene));
         stage.show();
     }

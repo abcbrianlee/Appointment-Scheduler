@@ -118,7 +118,7 @@ public class appointmentController {
                     } else {
                         AppointmentDB.addAppointment(addAppointmentID, addTitle, addDescription, addLocation, addType, addContact, Customer.getCustomerID(addCustomer), addUser, formattedStart, formattedEnd);
                         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-                        Object scene = FXMLLoader.load(getClass().getResource("/BLMain/MainMenu.fxml"));
+                        Object scene = FXMLLoader.load(getClass().getResource("/MainMenu.fxml"));
                         stage.setScene(new Scene((Parent) scene));
                         stage.show();
                     }
@@ -200,11 +200,11 @@ public class appointmentController {
         ObservableList<String> end = FXCollections.observableArrayList("6:00","7:00", "8:00", "9:00", "10:00","11:00", "12:00", "13:00", "14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00", "22:00","23:00");
         cb_endTime.setItems(end);
     }
-    /**Exits page and returns to Main Menu
+    /**Exits page and returns to BLMain.Main Menu
      * @param event  Exit Button*/
     public void onActionExit(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        Object scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/BLMain/MainMenu.fxml")));
+        Object scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/MainMenu.fxml")));
         stage.setScene(new Scene((Parent) scene));
         stage.show();
     }

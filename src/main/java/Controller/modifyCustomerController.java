@@ -120,18 +120,18 @@ public class modifyCustomerController {
             Integer divisionID = division.getDivision(addDivision);
             CustomerDB.modifyCustomer(name, address, phone, postal, customerID, divisionID);
             Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-            Object scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/BLMain/MainMenu.fxml")));
+            Object scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/MainMenu.fxml")));
             stage.setScene(new Scene((Parent) scene));
             stage.show();
         } else {
             System.out.println("error");
         }
     }
-    /**Exits page and returns to Main Menu
+    /**Exits page and returns to BLMain.Main Menu
      * @param event Exit Button*/
     public void onActionCancel(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        Object scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/BLMain/MainMenu.fxml")));
+        Object scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/MainMenu.fxml")));
         stage.setScene(new Scene((Parent) scene));
         stage.show();
     }
