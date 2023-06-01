@@ -1,13 +1,26 @@
-<h1>#Appointment Scheduler</h1>
+<h1>Appointment Scheduler</h1>
 
-This project is a Java/FXML/Scenebuilder application that allows users to log in using a MySQL database. Users can add, create, update, or delete contact users in the database while also assigning appointments. Additionally, a reports page is generated, providing users with information on appointments using various queries. All login attempts are also recorded in a .txt file. The application is designed to streamline contact and appointment management, providing a user-friendly interface for efficient organization and scheduling.
+The Appointment Scheduler is a Java/FXML/Scenebuilder application designed to simplify your contact and appointment management.  This application allows users to securely log in using a MySQL database and seamlessly handle various tasks, such as adding, creating, updating and deleting contact users and appointments. It has the ability to assign appointments and generate insightful reports.   
 
+# <span style="font-size: 16px;">Technologies Used</span>
+* <b>Java</b>: The core programming language used for the application's logic.<br>
+* <b>FXML</b>: A markup language for designing the application's user interface.<br>
+* <b>Scenebuilder</b>: A visual layout tool for designing FXML-based interfaces.
+* <b>MySQL</b>: A powerful database used to store information
 ## Project Description
-This application stores login credentials in MySQL. The application tracks where the user is located and translates timezone accordingly to show current time and timezone on the login page. It also can translate between English or French depending on user language settings.  The Main Menu shows two tableviews: Customer and Appointments. The User can search through all the appointments by day, week or month.  Adding or updating a customer will bring a new page with required information to be entered for that customer and saved into the database. Deleting a customer is possible as long as no appointments are scheduled for that customer. If there is an existing appointment for that customer upon deletion, an error message will be displayed, as well as incorrect information being entered for adding or updating a customer. 
+The Appointment Scheduler leverages the strength of MySQL to store login credentials securely.  The application is able to track the user's location and automatically adjust the timezone, ensuring that the displayed timezone on the login page are accurate and convenient.  Furthermore, the application is able to switch between English and French based on the user's language preference.<br>
+<br>The Main Menu offers an interface with two primary sections: Customers and Appointments.  Users can search through appointments by day, week, or month, enabling quick access to the desired information.  Adding or updating a customer enables changes to the interface as well as the database.  Deletion of customers is allowed, provided that no appointments are associated with them. If an appointment is linked to a customer upon deletion, the application will display and error message, preventing accidental removal of critical information and requiring the user to first delete the appointment.<br>
+<br>Users are also able to manage appointments as well by either adding, updating or deleting appointments, all while adhering to business hours.  Appointments can only be scheduled between 8am and 7pm centrail time on weekdays.  The application enforces the non-overlapping of appointments, ensuring a smooth and organized schedule. Additionally, a helpful 15-minute reminder will prompt users before their next appointment.  When adding an appointment, users must associate it with a specific customer, further streamlining the process. Although appointment times are adjusted to display in the user's timezone, the are stored in the MySQL database inUTC time, ensuring accuracy and consistency across different time zones.<br>
+<br>In-depth reports provide valuable insights into appointments and customer.  Users can generate reports using various queries, such as sorting by appointment type, contact or country(France, US, UK).  These reports serve as a powerful tool for generating future analysis and planning. Furthermore, the Appointment Scheduler records all login attempts, successful or unsuccessful, in a dedicated login_activity.txt file, capturing important information like usernames, passwords, and timestamps for security monitoring.
 
-Adding, updating and deletion of appointments is also possible. Appointments must be scheduled after 8am central time or before 7pm central time. Appointments must also be scheduled weekdays only. Failure to do so will result in an error. Appointments cannot be overlapped and a 15 minute reminder will be prompt before the next appointment.  Upon addition of an appointment, a customer must be selected for that appointment. Times are adjusted accordingly to be shown in the user's timezone, however they are stored in MySQL database in UTC time and must abide by central time business hours.  
+<h2>Instructions</h2>
+To run the Appointment Scheduler on your local machine, follow these steps:<br>
+<br>1. Clone this repository to your local machine<br>
+2. Open the project in your preferred Java IDE<br>
+3. Set Main.java located at src/main/java/Main as the entry point.<br>
+4. Build and run the application<br>
+5. Enter 'test' as username and password (case-sensitive)<br>
+6. Start managing contacts and appointments with ease!<br>
 
-A reports page is also available. This page will show all appointments and customers by different queries. Such queries include sorting by appointment type, appointment's contact, or appointments by country (France, US, UK). This reports page will be useful in generating future reports. A login_activity.txt also records all login attempts, whether successful or unsuccessful, with its respective username and password as well as the time.
-
-##Instructions
-Upon logging in, enter 'test' as username and password(Case Sensitive).  This will direct you to the homepage. Appointments and Customers can be added, updated or deleted by clicking on its respective buttons. Reports page can be accessed by clicking on 'reports' and using the dropdown to specify queries.
+<h2>Contributions</h2>
+Contributions to the Appointment Scheduler are welcome! If you have any suggestions, bug reports, or feature requests, please feel free to submit an issue or a pull request.
